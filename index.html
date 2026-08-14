@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lase Olufemi | Full Stack Developer & AI Engineer</title>
+    <meta name="description" content="Portfolio of Lase Olufemi — a full-stack developer and AI engineer building scalable web apps, landing pages, and intelligent systems.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- ============ NAV ============ -->
+    <nav class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="#" class="logo">&lt;lase_oluu /&gt;</a>
+        <ul class="nav-links">
+          <li><a href="#about">#about-me</a></li>
+          <li><a href="#skills">#skills</a></li>
+          <li><a href="#projects">#projects</a></li>
+          <li><a href="#contact">#contact-me</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="#about"  onclick="closeMobile()">#about-me</a>
+        <a href="#skills" onclick="closeMobile()">#skills</a>
+        <a href="#projects" onclick="closeMobile()">#projects</a>
+        <a href="#contact" onclick="closeMobile()">#contact-me</a>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-badge reveal">Available for projects</div>
+        <h1 class="reveal reveal-delay-1">Lase Olufemi</h1>
+        <p class="hero-role mono reveal reveal-delay-2">
+          <span class="typed" id="typed-text"></span><span class="cursor"></span>
+        </p>
+        <p class="lead reveal reveal-delay-3">
+          I build scalable web applications, stunning landing pages, and intelligent systems that help businesses stand out and grow.
+        </p>
+        <div class="btn-row reveal reveal-delay-4">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn" href="#projects">View my work</a>
+        </div>
+        <div class="socials reveal reveal-delay-5">
+          <a href="https://github.com/lasecode" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.258 5.63 5.906-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+          </a>
+        </div>
+        <div class="scroll-hint reveal">scroll</div>
+      </div>
+    </header>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <span class="section-label reveal">/ intro</span>
+        <h2 class="section-title mono reveal">
+          <span class="accent">#about-me</span><i></i>
+        </h2>
+        <div class="about-grid reveal">
+          <div class="about-text">
+            <p class="lead">
+              I'm a <span class="accent">Full-Stack Developer</span> who builds websites, web apps, and landing pages that help businesses stand out and grow.
+            </p>
+            <p class="lead" style="margin-top: 18px;">
+              I also dabble in <span class="accent">AI</span> — building AI-powered projects and helping businesses integrate intelligent systems into their services. I code about as well as I binge-read random novels, <span class="accent">so yeah, I'm pretty good.</span>
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Curiosity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <span class="section-label reveal">/ tech stack</span>
+        <h2 class="section-title mono reveal">
+          <span class="accent">#skills</span><i></i>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal reveal-delay-1">
+            <span class="skill-icon">🌐</span>HTML / CSS
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <span class="skill-icon">⚡</span>JavaScript
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <span class="skill-icon">🐍</span>Python
+          </div>
+          <div class="skill-card reveal reveal-delay-4">
+            <span class="skill-icon">🤖</span>AI / LLMs
+          </div>
+          <div class="skill-card reveal reveal-delay-5">
+            <span class="skill-icon">🗄️</span>Databases
+          </div>
+          <div class="skill-card reveal reveal-delay-1">
+            <span class="skill-icon">☁️</span>Cloud / DevOps
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <span class="skill-icon">⚛️</span>React
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
+            <span class="skill-icon">🔷</span>Next.js
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <span class="section-label reveal">/ work</span>
+        <h2 class="section-title mono reveal">
+          <span class="accent">#projects</span><i></i>
+        </h2>
+        <div class="projects-grid">
+
+          <a class="project-card reveal reveal-delay-1" href="https://lasecode.github.io/saas-landingpage/" target="_blank" rel="noopener">
+            <div class="project-header">
+              <h3>SaaS Landing Page</h3>
+              <span class="project-link-icon">↗</span>
+            </div>
+            <p class="project-desc">A modern, conversion-focused SaaS landing page with clean sections, feature highlights, and a compelling call-to-action.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </a>
+
+          <a class="project-card reveal reveal-delay-2" href="https://lasecode.github.io/salon-landingpage/" target="_blank" rel="noopener">
+            <div class="project-header">
+              <h3>Salon Landing Page</h3>
+              <span class="project-link-icon">↗</span>
+            </div>
+            <p class="project-desc">An elegant landing page for a beauty salon, showcasing services, gallery, and an online booking flow.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </a>
+
+          <a class="project-card reveal reveal-delay-3" href="https://lasecode.github.io/resturantlanding-page/" target="_blank" rel="noopener">
+            <div class="project-header">
+              <h3>Restaurant Landing Page</h3>
+              <span class="project-link-icon">↗</span>
+            </div>
+            <p class="project-desc">A rich, visually appetizing landing page for a restaurant with menu sections, ambiance showcase, and reservations.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </a>
+
+          <a class="project-card reveal reveal-delay-4" href="https://lasecode.github.io/realestate-landingpage/" target="_blank" rel="noopener">
+            <div class="project-header">
+              <h3>Real Estate Landing Page</h3>
+              <span class="project-link-icon">↗</span>
+            </div>
+            <p class="project-desc">A professional real estate landing page featuring property listings, agent profiles, and contact forms.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </a>
+
+          <a class="project-card reveal reveal-delay-5" href="https://lasecode.github.io/ecommerce-landing-page/" target="_blank" rel="noopener">
+            <div class="project-header">
+              <h3>E-Commerce Landing Page</h3>
+              <span class="project-link-icon">↗</span>
+            </div>
+            <p class="project-desc">A sleek e-commerce landing page with product showcases, promotional banners, and a smooth shopping experience.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <span class="section-label reveal">/ let's talk</span>
+        <h2 class="section-title mono reveal">
+          <span class="accent">#contact-me</span><i></i>
+        </h2>
+        <div class="contact-grid">
+          <div class="form-card reveal">
+            <form id="contact-form" class="form" novalidate>
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" id="input-name">
+                <small class="error" data-error="name"></small>
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" id="input-email">
+                <small class="error" data-error="email"></small>
+              </label>
+              <label>
+                Subject
+                <input type="text" name="subject" placeholder="What's this about?" id="input-subject">
+                <small class="error" data-error="subject"></small>
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Tell me about your project..." id="input-message"></textarea>
+                <small class="error" data-error="message"></small>
+              </label>
+              <button type="submit" class="btn btn-primary" id="submit-btn">Send message →</button>
+              <p id="form-success" class="success" hidden>✓ Thanks! Your message has been sent.</p>
+            </form>
+          </div>
+
+          <div class="info-card reveal reveal-delay-2">
+            <h3>Message me here</h3>
+            <div class="info-row">
+              <span class="info-icon">📧</span>
+              <a href="mailto:you@example.com">laseolufemi48@.com</a>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">💬</span>
+              <span>instagram: lase_oluu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🐙</span>
+              <a href="https://github.com/lasecode" target="_blank" rel="noopener">github.com/lasecode</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#" class="logo">&lt;lase_oluu /&gt;</a>
+        <div class="footer-right">
+          <p class="mono muted">© <span id="year">2026</span> Lase Olufemi</p>
+          <p class="mono muted" style="font-size:11px; margin-top:4px;">Designed & built with ♥</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
