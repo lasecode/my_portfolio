@@ -86,50 +86,50 @@ typeWriter();
 // ============================================================
 // CONTACT FORM VALIDATION
 // ============================================================
-const form    = document.getElementById("contact-form");
-const success = document.getElementById("form-success");
-
-function showError(field, message) {
-  const el = form.querySelector(`[data-error="${field}"]`);
-  if (el) el.textContent = message || "";
-}
-
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
   const data = {
-    name:    form.name.value.trim(),
-    email:   form.email.value.trim(),
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
     subject: form.subject.value.trim(),
     message: form.message.value.trim(),
   };
 
   const errors = {};
-  if (!data.name)    errors.name    = "Name is required";
-  else if (data.name.length > 100) errors.name = "Name is too long";
 
-  if (!data.email)   errors.email   = "Email is required";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
+  if (!data.name) {
+    errors.name = "Name is required";
+  } else if (data.name.length > 100) {
+    errors.name = "Name is too long";
+  }
+
+  if (!data.email) {
+    errors.email = "Email is required";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
     errors.email = "Invalid email address";
+  }
 
-  if (!data.subject) errors.subject = "Subject is required";
-  else if (data.subject.length > 200) errors.subject = "Subject is too long";
+  if (!data.subject) {
+    errors.subject = "Subject is required";
+  } else if (data.subject.length > 200) {
+    errors.subject = "Subject is too long";
+  }
 
-  if (!data.message) errors.message = "Message is required";
-  else if (data.message.length > 1000) errors.message = "Message is too long";
+  if (!data.message) {
+    errors.message = "Message is required";
+  } else if (data.message.length > 1000) {
+    errors.message = "Message is too long";
+  }
 
-  ["name", "email", "subject", "message"].forEach((f) =>
-    showError(f, errors[f])
-  );
+  ["name", "email", "subject", "message"].forEach((field) => {
+    showError(field, errors[field]);
+  });
 
   if (Object.keys(errors).length > 0) {
+    e.preventDefault();
     success.hidden = true;
     return;
   }
 
-  // No backend yet — log and show success.
-  console.log("Contact form submitted:", data);
-  form.reset();
-  success.hidden = false;
 });
 
 // Clear error on input
